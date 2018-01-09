@@ -5,11 +5,7 @@ BRANDS = []
   def initialize(brand)
     @brand = brand
     BRANDS << brand
-    BRANDS.each do |existing|
-      if existing == brand 
-        BRANDS.pop
-      end 
-    end 
+    BRANDS.uniq
   end
 
   def cobble
