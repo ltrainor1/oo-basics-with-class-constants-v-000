@@ -4,8 +4,11 @@ class Shoe
 BRANDS = []
   def initialize(brand)
     @brand = brand
+    dup = BRANDS.include?(brand)
     BRANDS << brand
-    BRANDS.uniq
+    if dup 
+      BRANDS.pop
+    end 
   end
 
   def cobble
